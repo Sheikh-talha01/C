@@ -1,1 +1,43 @@
 
+#include<iostream>
+using namespace std;
+
+class Point 
+{
+    int x,y;
+public:
+    Point (int a=0)
+    {
+        x=a;
+       
+    }
+    bool operator >(const Point& obj)
+    {
+        if(x > obj.x)
+            return true;
+        else 
+            return false;
+    }
+    void getter()
+    {
+        cout<<"Enter value for x: "<<endl;
+        cin>>x;
+    }
+    void setter()
+    {
+        cout<<"X is: "<<x<<endl;
+    }
+};
+
+int main()
+{
+    Point a,b;
+    a.getter();
+    a.setter();
+    b.getter();
+    b.setter();
+    if (a>b)
+        cout<<"First object is greater than second"<<endl;
+    else 
+        cout<<"Second object is greater than first"<<endl;
+}
