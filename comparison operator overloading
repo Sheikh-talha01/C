@@ -1,4 +1,4 @@
-
+#  This code is an example of comparison operator overloading
 #include<iostream>
 using namespace std;
 
