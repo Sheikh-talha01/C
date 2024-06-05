@@ -1,1 +1,43 @@
 
+#include<iostream>
+using namespace std;
+
+class Point
+{
+	int x,y;
+public:
+	Point(int a=0)
+	{
+		x=a;	
+	}	
+	bool operator ==(const Point& obj)
+	{
+		if(x == obj.x )
+			return true;
+		else 
+			return false; 
+	}
+	void setter()
+	{
+		cout<<"Enter value for x: "<<endl;
+		cin>>x;
+	}
+	void getter()
+	{
+		cout<<"X is: "<<x<<endl;
+	}
+	
+};
+
+int main()
+{
+	Point a,b;
+	a.setter();
+	a.getter();
+	b.setter();
+	b.getter();
+	if (a == b)
+		cout<<"A is equal to B"<<endl;
+	else 
+		cout<<"A is not equal to B."<<endl;
+}
