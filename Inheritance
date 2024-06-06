@@ -1,0 +1,52 @@
+#include <iostream>
+using namespace std;
+
+class Employee
+{
+    public:
+    float salary;
+    int vacationdays;
+    void getsalary()
+    {
+        // cout << "Employee's salary : "<<salary<<endl;
+        cout<<"No of vacation days: "<<vacationdays<<endl;
+        if( vacationdays == 0)
+            cout<<"Employee's salary : "<<salary * 1.1 <<endl;
+        else 
+            cout << "Employee's salary : "<<salary<<endl;
+    }               
+};
+class Manager: public Employee
+{
+    public:
+    Manager(float s, int _vacationdays)
+    {
+        salary = s;
+        vacationdays = _vacationdays;
+    }
+};
+class Salesperson : public Employee
+{
+    public:
+    Salesperson(float s, int _vacationdays)
+    {
+        salary = s;
+        vacationdays = _vacationdays;
+    }
+};
+class Engineer : public Employee
+{
+    public:
+    Engineer(float s, int _vacationdays)
+    {
+        salary = s;
+        vacationdays = _vacationdays;
+    }
+};
+int main ()
+{
+    Manager m1(250000, 3);
+    m1.getsalary();
+    Salesperson s1(250000,0);
+    s1.getsalary();
+}
