@@ -1,3 +1,5 @@
+// this code is an example of inheritance
+
 #include <iostream>
 using namespace std;
 
