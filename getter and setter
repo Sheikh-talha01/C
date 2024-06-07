@@ -1,1 +1,49 @@
 
+#include <iostream>
+using namespace std;
+class Percentage 
+{
+private:
+    int obtained_marks;
+    int total_marks;
+    double result;
+public:
+    // Public getter for the result
+    double getPercentage() const
+    {
+        return result;
+    }
+    // Constructor to initialize obtained_marks and total_marks
+    Percentage(int obtained, int total) : obtained_marks(obtained), total_marks(total)
+    {
+        calculatePercentage();
+    }
+    // Function to calculate percentage and store in result
+    void calculatePercentage() 
+    {
+        // Ensure total_marks is not zero to avoid division by zero
+        if (total_marks == 0) 
+        {
+            cout<< "Error: Total marks cannot be zero." << std::endl;
+            result = 0.0; // Set result to 0 for error handling
+        } 
+        else 
+        {
+            result = static_cast<double>(obtained_marks) / total_marks * 100.0;
+        }
+    }
+};
+
+int main() {
+    int obtained = 537;
+    int total = 600;
+
+    Percentage percentage(obtained, total);
+
+    // Access the percentage using the getter
+    double calculatedPercentage = percentage.getPercentage();
+
+    cout << "Percentage: " << calculatedPercentage << "%" << std::endl;
+
+    return 0;
+}
