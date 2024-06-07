@@ -1,1 +1,43 @@
 
+#include<iostream>
+using namespace std;
+
+class Employee
+{
+    private:
+    int id;
+    static int count;
+    public:
+    void setData()
+    {
+        cout<<"enter id: "<<endl;
+        cin>>id;
+        count++;
+    }
+    void display(void)
+    {
+        cout<<"id : "<<id<<endl;
+        cout<<"No of objects created so far : "<<count<<endl;
+    }
+    static void getcount()
+    {
+        cout<<count;
+    }
+
+};
+int Employee:: count;
+
+int main()
+{
+    Employee e1,e2;
+    e1.setData();
+    e1.display();
+    e1.getcount();
+    cout<<"-------------------------------------"<<endl;
+    e2.setData();
+    e2.display();
+    // cout<<Employee::count<<endl;
+    
+    
+
+}
