@@ -1,0 +1,50 @@
+#include <iostream>
+#include <vector>
+
+//     at, back() ,    begin() ,   size, clear(), 
+using namespace std;
+
+int main() {
+  // Create a vector of integers
+  vector<int> numbers = {10, 20, 30, 40};
+
+  // Access element using at() for safe access with bounds checking
+ 
+    int second_element = numbers.at(1); 
+
+    int x = numbers[1]; // Access the element at index 1 (20)
+    cout << "Second element: " << second_element << endl;
+    cout<<x<<endl;
+    int z = numbers.back();
+    cout<<z<<endl;
+
+    vector<int> ::iterator iter = numbers.begin();
+
+    // numbers.clear();
+    // cout<<numbers.at(2);
+    // cout<<numbers.size();
+    
+   
+    // cout<<numbers.empty();  // true
+    // numbers.erase(numbers.begin() + 1); // always work with .begin() or .end() function
+    // cout<<numbers.size();
+
+    cout<<"usign at " <<numbers.at(0)<<endl;
+    cout<<"using front"<<numbers.front()<<endl;
+   
+    cout<<numbers.at(0)<<endl;
+    
+  numbers.pop_back();
+  cout<<numbers.size()<<endl;
+  numbers.push_back(90);
+  cout<<numbers.at(3)<<endl;
+  cout<<numbers.size()<<endl;
+  numbers.resize(6);
+  cout<<numbers.size();
+
+    // Example of potential out-of-bounds access (handled by the try-catch block)
+    // int out_of_bounds = numbers.at(10);  // This would throw an exception
+  
+
+  return 0;
+}
