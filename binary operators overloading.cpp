@@ -1,4 +1,4 @@
-// This file contains a program of binary operator overloading
+// This file contains a program of binary operator overloading in C++
 #include<iostream>
 using namespace std;
 
